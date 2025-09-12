@@ -1,0 +1,117 @@
+:root{
+	--bg:#0f1115;
+	--panel:#121418;
+	--muted:#9aa3b2;
+	--accent:#7c5cff;
+	--text:#e6eef8;
+	--radius:10px;
+	--gap:18px;
+	font-size:16px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+	background:linear-gradient(180deg,#0b0c0e 0%, #0f1115 100%);
+	color:var(--text);
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+.site-header{
+	padding:20px 28px;
+	border-bottom:1px solid rgba(255,255,255,0.03);
+	display:flex;
+	align-items:center;
+	background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+}
+.site-title{
+	margin:0;
+	font-weight:600;
+	letter-spacing:0.3px;
+	font-size:1.05rem;
+	color:var(--text);
+}
+
+.layout{
+	display:flex;
+	gap:var(--gap);
+	padding:22px;
+	height:calc(100vh - 76px);
+}
+
+.sidebar{
+	width:320px;
+	max-width:36%;
+	background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+	border-radius:var(--radius);
+	padding:16px;
+	overflow:auto;
+	box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+	border:1px solid rgba(255,255,255,0.03);
+}
+
+.search input{
+	width:100%;
+	padding:10px 12px;
+	background:transparent;
+	border:1px solid rgba(255,255,255,0.03);
+	border-radius:8px;
+	color:var(--text);
+	outline:none;
+}
+
+.post-list{
+	margin-top:12px;
+	display:flex;
+	flex-direction:column;
+	gap:8px;
+}
+
+.post-item{
+	padding:12px;
+	border-radius:8px;
+	cursor:pointer;
+	transition:background .18s, transform .08s;
+}
+.post-item:hover{
+	background:rgba(124,92,255,0.08);
+	transform:translateY(-2px);
+}
+.post-title{
+	font-weight:600;
+	font-size:0.98rem;
+	margin:0 0 4px 0;
+}
+.post-meta{
+	font-size:0.82rem;
+	color:var(--muted);
+}
+
+/* content */
+.content{
+	flex:1;
+	overflow:auto;
+	padding:20px;
+	border-radius:var(--radius);
+	background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+	box-shadow: 0 6px 22px rgba(2,6,23,0.55);
+	border:1px solid rgba(255,255,255,0.03);
+}
+.post{
+	max-width:900px;
+	margin:0 auto;
+	padding-bottom:60px;
+}
+.post h2{margin-top:0}
+.post p{color:var(--muted);line-height:1.7}
+.post .content-body{color:var(--text)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* small screens */
+@media (max-width:900px){
+	.layout{flex-direction:column;padding:14px;height:auto}
+	.sidebar{width:100%}
+	.content{width:100%}
+}

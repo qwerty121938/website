@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>簡潔深色 Blog</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header class="site-header">
+		<h1 class="site-title">簡潔深色 Blog</h1>
+	</header>
+
+	<main class="layout">
+		<aside class="sidebar">
+			<div class="search">
+				<input id="search" placeholder="搜尋文章..." />
+			</div>
+			<nav id="postList" class="post-list">
+				<!-- 文章清單由 script.js 動態產生 -->
+			</nav>
+		</aside>
+
+		<section id="content" class="content">
+			<!-- 文章內容會被載入到此 -->
+			<article id="post" class="post">
+				<p class="placeholder">請從左側選擇一篇文章。</p>
+			</article>
+		</section>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
