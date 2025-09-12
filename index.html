@@ -26,9 +26,13 @@
 			<article id="post" class="post">
 				<p class="placeholder">請從左側選擇一篇文章。</p>
 			</article>
+			<!-- 新增：若以 file:// 開啟，顯示提示（script 會控制顯示） -->
+			<div id="serveWarning" class="warning" aria-hidden="true" style="display:none;">
+				<p>注意：若你是直接以檔案開啟（file://），瀏覽器可能無法使用 fetch 讀取 posts。建議在專案資料夾啟動本機伺服器，例如：<code>python -m http.server</code>，然後在瀏覽器以 http://localhost:8000 開啟。</p>
+			</div>
 		</section>
 	</main>
 
-	<script src="script.js"></script>
+	<script src="script.js" defer></script>
 </body>
 </html>
